@@ -1,0 +1,21 @@
+<div class="border-container">
+  <div class="d-flex justify-content-between">
+    <h1><%= @task.title %></h1>
+
+    <div class="edit-btn btn btn-light d-flex align-items-center">
+      <div><%= icon('fas', 'edit') %><%= link_to "Edit this task", edit_task_path %></div>
+    </div>
+
+  </div>
+
+
+  <div class="details">
+    <div> <%= @task.details %></div>
+  </div>
+
+  <p><%= @task.completed ? icon('fa', 'check-square') : icon('far', 'square') %> <%= @completed %> </p>
+
+</div>
+
+
+<%= link_to "Back to list", tasks_path %>
